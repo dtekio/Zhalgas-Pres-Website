@@ -86,10 +86,6 @@ p {
     text-align: center;
   }
 
-  .title-image {
-    position: static;
-    transform: rotate(0);
-  }
 }
 #title {
   background-color: #8e52fb;
@@ -103,10 +99,8 @@ p {
 
 /* Title Image */
 .title-image {
-  width: 60%;
-  transform: rotate(25deg);
-  position: absolute;
-  right: 30%;
+  width: 90%;
+  border-radius: 20%;
 }
 
 /* Features Section */
