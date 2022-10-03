@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Birge</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- CSS Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico')}}">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home') }}">Birge</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Особенности</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('static', filename='resume.pdf')}}">Обо мне</a>
+          </li>
+          <li class="nav-item">
+            <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#info">Связаться</a>
+          </li>
+          <li class="nav-item">
+            <a>About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% import "bootstrap/wtf.html" as wtf %}
+
+  <section class="colored-section" id="title">
+    <!-- Title -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">ӨЗБЕХАН ЖАЛҒАС</h1>
+          <h5>— bizben birge bol 💜🧡</p>
+            <a href="https://chat.whatsapp.com/KIFPP3QRn1TIGAtm3lEuCg" class="btn btn-primary">Присоединяйся к нашей
+              группе WhatsApp!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modals -->
+  <div class="modal fade" id="info" tabindex="-1" aria-labelledby="infoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoLabel">Свяжись со мной</h5>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6">
+                <form action="/contact" method="post" id='contactform' class="form" role="form" novalidate="">
+                  <div class="form-group  required"><label class="control-label" for="name">Имя</label>
+                    <input class="form-control" id="name" name="name" required="" type="text" value="">
+                  </div>
+                  <div class="form-group  required"><label class="control-label" for="message">Сообщение</label>
+                    <input class="form-control" id="message" name="message" required="" type="text" value="">
+                  </div>
+                  <input class="btn btn-outline-dark" id="submit" name="submit" type="submit" value="Send"
+                    formtarget="#contactform">
+                </form>
+              </div>
+
+              <div class="col-lg-6">
+                <h3 class="contact">Данные</h3>
+                <p class="small">
+                  Номер телефона: +7 776 900 8060 <br>
+                  Е-мэйл: email <br>
+                </p>
+                <ul class="list-inline text-center">
+                  <h2>Соц. сети</h1>
+                    <li class="list-inline-item">
+                      <a href="https://www.instagram.com/oz.zhalgas/">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="https://www.instagram.com/birgecouncil/">
+                        <span class="fa-stack fa-lg">
+                          <i class="fas fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Features -->
+  <section class="white-section" id="about">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-10 mx-auto">
+          <h2>Привет.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam tenetur nam eaque earum non sint.
+            Praesentium eveniet eos optio. Beatae ipsa perspiciatis, repudiandae labore assumenda cum quis quaerat
+            veniam.
+          </p>
+
+
+        </div>
+        <div class="col-lg-6 col-md-10 mx-auto">
+          <h3>Expertise.</h3>
+          <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100">Problem-solving</div>
+          </div> <br>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100">Organizational</div>
+          </div> <br>
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100">Leadership</div>
+          </div> <br>
+          <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 65%" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100">Communication</div>
+          </div> <br>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100">Teamwork</div>
+          </div> <br>
+
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-crosshairs fa-4x"></i>
+          <h3 class="feature-title">Что-то.</h3>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i>
+          <h3 class="feature-title">Что-то.</h3>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-comments fa-4x"></i>
+          <h3 class="feature-title">Что-то.</h3>
+          <p>Lorem ipsum dolor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="colored-section" id="testimonials">
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">Айдана</h2>
+          <br>
+          <img class="testimonial-image" src="{{ url_for('static', filename='img/aidana.jpeg')}}" alt="">
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">Рамадан</h2>
+          <br>
+          <img class="testimonial-image" src="{{ url_for('static', filename='img/ramadan.jpeg')}}" alt="">
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">Томирис</h2>
+          <br>
+          <img class="testimonial-image" src="{{ url_for('static', filename='img/tomiris.jpeg')}}" alt="">
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Press -->
+  <section class="colored-section" id="press">
+    <h3>Смотреть:</h3>
+    <li class="list-inline-item">
+      <h6 class="small"><a href="#">Доп. ссылка</a></h6>
+    </li>
+    <li class="list-inline-item">
+      <h6 class="small"><a href="#">Доп. ссылка</a></h6>
+    </li>
+    <li class="list-inline-item">
+      <h6 class="small"><a href="#">Доп. ссылка</a></h6>
+    </li>
+
+  </section>
+
+  <!-- features -->
+  <section class="white-section" id="features">
+    <h2 class="section-heading">Особенности</h2>
+    <p>Умная цитата.</p>
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="card col-lg-6">
+          <div class="card-header">
+            <h3>Название</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Особенность</h2>
+            <p>Что-то</p>
+            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Contact</button></a>
+          </div>
+        </div>
+
+        <div class="card col-lg-6">
+          <div class="card-header">
+            <h3>Название</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Особенность</h2>
+            <p>Что-то еще</p>
+            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Contact</button></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <hr>
+
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
