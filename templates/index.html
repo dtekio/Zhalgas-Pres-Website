@@ -37,23 +37,34 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Обо мне</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Наша команда</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#features">Особенности</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{url_for('static', filename='resume.pdf')}}">Обо мне</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#info">Связаться</a>
-          </li>
-          <li class="nav-item">
-            <a>About</a>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ещё
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{url_for('static', filename='resume.pdf')}}">Резюме</a>
+              </li>
+              <li><a class="dropdown-item" href="{{url_for('static', filename='presentation.pdf')}}">Презентация</a>
+              </li>
+              <li><hr class="dropdown-divider "></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#info">Связаться</a>
+              </li>    
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  {% import "bootstrap/wtf.html" as wtf %}
 
   <section class="colored-section" id="title">
     <!-- Title -->
@@ -64,12 +75,15 @@
           <h1 class="big-heading">ӨЗБЕХАН ЖАЛҒАС</h1>
           <h5>— bizben birge bol 💜🧡</p>
             <h5>Присоединяйся!</h5>
-            <a href="https://chat.whatsapp.com/KIFPP3QRn1TIGAtm3lEuCg" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-            <a href="https://t.me/+sgmk-e16JA43YTQy" class="btn btn-primary"><i class="fa-brands fa-telegram"></i>Telegram</a>
+            <a href="https://chat.whatsapp.com/KIFPP3QRn1TIGAtm3lEuCg" class="btn btn-primary"><i
+                class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+            <a href="https://t.me/+sgmk-e16JA43YTQy" class="btn btn-primary"><i
+                class="fa-brands fa-telegram"></i>Telegram</a>
+
         </div>
 
         <div class="col-lg-6">
-            <img class="title-image" src="{{ url_for('static', filename='img/zhalgas.jpeg')}}" alt="iphone-mockup">
+          <img class="title-image" src="{{ url_for('static', filename='img/zhalgas.jpeg')}}" alt="iphone-mockup">
         </div>
       </div>
     </div>
@@ -94,7 +108,7 @@
                   <div class="form-group  required"><label class="control-label" for="message">Сообщение</label>
                     <input class="form-control" id="message" name="message" required="" type="text" value="">
                   </div>
-                  <input class="btn btn-outline-dark" id="submit" name="submit" type="submit" value="Send"
+                  <input class="btn btn-outline-dark" id="submit" name="submit" type="submit" value="Отправить"
                     formtarget="#contactform">
                 </form>
               </div>
@@ -102,8 +116,8 @@
               <div class="col-lg-6">
                 <h3 class="contact">Данные</h3>
                 <p class="small">
-                  Номер телефона: +7 776 900 8060 <br>
-                  Е-мэйл: email <br>
+                  Телефон: +7 776 900 8060 <br>
+                  E-mail: birgenisphmd@gmail.com <br>
                 </p>
                 <ul class="list-inline text-center">
                   <h2>Соц. сети</h1>
@@ -137,7 +151,7 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
@@ -205,25 +219,82 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="colored-section" id="testimonials">
-    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+  <section class="colored-section" id="team">
+    <div id="team-carousel" class="carousel slide" data-ride="false">
       <div class="carousel-inner">
         <div class="carousel-item active container-fluid">
-          <h2 class="testimonial-text">Айдана</h2>
+          <h2 class="team-text">Айдана</h2>
           <br>
-          <img class="testimonial-image" src="{{ url_for('static', filename='img/aidana.jpeg')}}" alt="">
+          <img data-bs-toggle="modal" data-bs-target="#aidana" class="team-image"
+            src="{{ url_for('static', filename='img/aidana.jpeg')}}" alt="">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="aidana" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Айдана</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                10G, inst: <a href="https://www.instagram.com/berkimbayyeva/">berkimbayyeva</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="carousel-item container-fluid">
           <h2 class="testimonial-text">Рамадан</h2>
           <br>
-          <img class="testimonial-image" src="{{ url_for('static', filename='img/ramadan.jpeg')}}" alt="">
+          <img data-bs-toggle="modal" data-bs-target="#ramadan" class="testimonial-image"
+            src="{{ url_for('static', filename='img/ramadan.jpeg')}}" alt="">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="ramadan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Рамадан</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                10B, inst: <a href="https://www.instagram.com/ramadan_marat/">ramadan_marat</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="carousel-item container-fluid">
           <h2 class="testimonial-text">Томирис</h2>
           <br>
-          <img class="testimonial-image" src="{{ url_for('static', filename='img/tomiris.jpeg')}}" alt="">
+          <img data-bs-toggle="modal" data-bs-target="#tomiris" class="testimonial-image"
+            src="{{ url_for('static', filename='img/tomiris.jpeg')}}" alt="">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="tomiris" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Томирис</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                10G, inst: <a href="https://www.instagram.com/tomiriskassym/">tomiriskassym</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -237,25 +308,10 @@
 
   </section>
 
-  <!-- Press -->
-  <section class="colored-section" id="press">
-    <h3>Смотреть:</h3>
-    <li class="list-inline-item">
-      <h6 class="small"><a href="#">Доп. ссылка</a></h6>
-    </li>
-    <li class="list-inline-item">
-      <h6 class="small"><a href="#">Доп. ссылка</a></h6>
-    </li>
-    <li class="list-inline-item">
-      <h6 class="small"><a href="#">Доп. ссылка</a></h6>
-    </li>
-
-  </section>
-
   <!-- features -->
   <section class="white-section" id="features">
-    <h2 class="section-heading">Особенности</h2>
-    <p>Умная цитата.</p>
+    <h2 class="section-heading">Что я предлагаю</h2>
+    <p>Больше всего я люблю быть надежным — это самое чистое наслаждение.</p>
     <div class="container-fluid">
       <div class="row">
 
@@ -266,7 +322,7 @@
           <div class="card-body">
             <h2 class="price-text">Особенность</h2>
             <p>Что-то</p>
-            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Contact</button></a>
+            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#info">Contact</button></a>
           </div>
         </div>
 
@@ -277,15 +333,24 @@
           <div class="card-body">
             <h2 class="price-text">Особенность</h2>
             <p>Что-то еще</p>
-            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Contact</button></a>
+            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#info">Contact</button></a>
           </div>
         </div>
-
       </div>
     </div>
-    </div>
-    <hr>
 
+    <div class="additional-links">
+      <h3>Смотреть:</h3>
+      <li class="list-inline-item">
+        <h6 class="small"><a href="#">Доп. ссылка</a></h6>
+      </li>
+      <li class="list-inline-item">
+        <h6 class="small"><a href="#">Доп. ссылка</a></h6>
+      </li>
+      <li class="list-inline-item">
+        <h6 class="small"><a href="#">Доп. ссылка</a></h6>
+      </li>
+    </div>
   </section>
 
   <!-- Bootstrap core JavaScript -->

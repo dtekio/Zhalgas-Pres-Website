@@ -37,6 +37,7 @@ p {
 .section-heading {
   font-size: 3rem;
   line-height: 1.5;
+  padding-top: 50px;
 }
 
 /* Containers */
@@ -129,16 +130,16 @@ p {
   padding: 5px;
 }
 /* Testimonial Section */
-#testimonials {
+#team {
   background-color: #f68714;
 }
 
-.testimonial-text {
+.team-text {
   font-size: 3rem;
   line-height: 1.5;
 }
 
-.testimonial-image {
+.team-image {
   margin: 20px;
   width: 90%;
   max-height: 600px;
@@ -197,4 +198,12 @@ p {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #f68714;
   --bs-btn-disabled-border-color: #f68714;
+}
+
+.additional-links {
+  padding-bottom: 50px;
+}
+
+.modal-content {
+  color: #000;
 }

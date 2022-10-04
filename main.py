@@ -6,7 +6,6 @@ from sendgrid.helpers.mail import Mail
 
 
 app = Flask(__name__)
-Bootstrap(app)
 
 
 @app.route('/', methods=['GET', 'POST'])
