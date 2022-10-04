@@ -8,10 +8,11 @@ hr {
 }
 
 a {
-  color:#8e52fb;
+  color: #8e52fb;
 }
+
 a:hover {
-  color:#7544cf;
+  color: #7544cf;
 }
 
 h1,
@@ -88,10 +89,18 @@ p {
   }
 
 }
+
 #title {
   background-color: #8e52fb;
   color: #fff;
   text-align: left;
+}
+
+.logo-image {
+  background: rgba(255, 255, 255, .5);
+  margin-top: 20px;
+  border-radius: 20%;
+  width: 70%;
 }
 
 #title .container-fluid {
@@ -101,6 +110,7 @@ p {
 /* Title Image */
 .title-image {
   width: 90%;
+  padding-top: 25px;
   border-radius: 20%;
 }
 
@@ -129,6 +139,7 @@ p {
 .progress-bar {
   padding: 5px;
 }
+
 /* Testimonial Section */
 #team {
   background-color: #f68714;
@@ -176,7 +187,7 @@ p {
 }
 
 #cta {
-  background-color:#EEEEEE;
+  background-color: #EEEEEE;
 }
 
 .form-control {
@@ -190,7 +201,7 @@ p {
   --bs-btn-hover-color: #cc7110;
   --bs-btn-hover-bg: #cc7110;
   --bs-btn-hover-border-color: #cc7110;
-  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #cc7110;
   --bs-btn-active-border-color: #cc7110;

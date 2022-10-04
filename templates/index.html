@@ -37,7 +37,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
-          
+
           <li class="nav-item">
             <a class="nav-link" href="#about">Обо мне</a>
           </li>
@@ -56,9 +56,11 @@
               </li>
               <li><a class="dropdown-item" href="{{url_for('static', filename='presentation.pdf')}}">Презентация</a>
               </li>
-              <li><hr class="dropdown-divider "></li>
+              <li>
+                <hr class="dropdown-divider ">
+              </li>
               <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#info">Связаться</a>
-              </li>    
+              </li>
             </ul>
           </li>
         </ul>
@@ -79,6 +81,9 @@
                 class="fa-brands fa-whatsapp"></i>WhatsApp</a>
             <a href="https://t.me/+sgmk-e16JA43YTQy" class="btn btn-primary"><i
                 class="fa-brands fa-telegram"></i>Telegram</a>
+            <br>
+
+            <img class="logo-image" src="{{ url_for('static', filename='img/logo.png')}}" alt="iphone-mockup">
 
         </div>
 
@@ -220,6 +225,7 @@
 
   <!-- Testimonials -->
   <section class="colored-section" id="team">
+    <h1 style="padding-top: 50px;">Наша команда: </h1>
     <div id="team-carousel" class="carousel slide" data-ride="false">
       <div class="carousel-inner">
         <div class="carousel-item active container-fluid">
@@ -250,7 +256,7 @@
         <div class="carousel-item container-fluid">
           <h2 class="testimonial-text">Рамадан</h2>
           <br>
-          <img data-bs-toggle="modal" data-bs-target="#ramadan" class="testimonial-image"
+          <img data-bs-toggle="modal" data-bs-target="#ramadan" class="team-image"
             src="{{ url_for('static', filename='img/ramadan.jpeg')}}" alt="">
         </div>
 
@@ -275,7 +281,7 @@
         <div class="carousel-item container-fluid">
           <h2 class="testimonial-text">Томирис</h2>
           <br>
-          <img data-bs-toggle="modal" data-bs-target="#tomiris" class="testimonial-image"
+          <img data-bs-toggle="modal" data-bs-target="#tomiris" class="team-image"
             src="{{ url_for('static', filename='img/tomiris.jpeg')}}" alt="">
         </div>
 
@@ -298,10 +304,10 @@
         </div>
 
       </div>
-      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-slide="prev">
+      <a class="carousel-control-prev" href="#team-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </a>
-      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+      <a class="carousel-control-next" href="#team-carousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
@@ -311,7 +317,8 @@
   <!-- features -->
   <section class="white-section" id="features">
     <h2 class="section-heading">Что я предлагаю</h2>
-    <p>Больше всего я люблю быть надежным — это самое чистое наслаждение.</p>
+    <p>"Больше всего я люблю быть надежным — это самое чистое наслаждение."</p>
+    <p class="small">- Эдгар Лоренс Доктороу, "Билли Батгейт"</p>
     <div class="container-fluid">
       <div class="row">
 
@@ -322,7 +329,8 @@
           <div class="card-body">
             <h2 class="price-text">Особенность</h2>
             <p>Что-то</p>
-            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#info">Contact</button></a>
+            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal"
+                data-bs-target="#info">Contact</button></a>
           </div>
         </div>
 
@@ -333,13 +341,15 @@
           <div class="card-body">
             <h2 class="price-text">Особенность</h2>
             <p>Что-то еще</p>
-            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#info">Contact</button></a>
+            <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal"
+                data-bs-target="#info">Contact</button></a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="additional-links">
+      <h1>#voteforzhalgas</h1>
       <h3>Смотреть:</h3>
       <li class="list-inline-item">
         <h6 class="small"><a href="#">Доп. ссылка</a></h6>
@@ -350,6 +360,8 @@
       <li class="list-inline-item">
         <h6 class="small"><a href="#">Доп. ссылка</a></h6>
       </li>
+
+      <h6 class="small">made by: @dtekio</h1>
     </div>
   </section>
 
