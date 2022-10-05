@@ -136,12 +136,12 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="infoLabel">Свяжись со мной</h5>
+          <h5 class="modal-title" id="infoLabel">Связаться</h5>
         </div>
         <div class="modal-body">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-6">
+              <!-- <div class="col-lg-6">
                 <form action="/contact" method="post" id='contactform' class="form" role="form" novalidate="">
                   <div class="form-group  required"><label class="control-label" for="name">Имя</label>
                     <input class="form-control" id="name" name="name" required="" type="text" value="">
@@ -152,7 +152,7 @@
                   <input class="btn btn-outline-dark" id="submit" name="submit" type="submit" value="Отправить"
                     formtarget="#contactform">
                 </form>
-              </div>
+              </div> -->
 
               <div class="col-lg-6">
                 <h3 class="contact">Данные</h3>
@@ -187,7 +187,6 @@
                         </span>
                       </a>
                     </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -293,9 +292,7 @@
                 {{member['grade']}}, inst: <a
                   href="https://www.instagram.com/{{member['inst']}}/">@{{member['inst']}}</a>
               </div>
-              <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
             </div>
           </div>
         </div>
@@ -321,9 +318,7 @@
                 {{member['grade']}}, inst: <a
                   href="https://www.instagram.com/{{member['inst']}}/">{{member['inst']}}</a>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
             </div>
           </div>
         </div>
@@ -423,12 +418,13 @@
       <div class="feedback">
         <h3>Есть предложения? Свяжись с нами, и мы ответим</h3>
         <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal"
-            data-bs-target="#info">Contact</button></a>
+            data-bs-target="#info">Связаться</button></a>
       </div>
     </div>
 
     <div class="additional-links">
       <h1>#voteforzhalgas</h1>
+<!--       
       <h3>Смотреть:</h3>
       <li class="list-inline-item">
         <h6 class="small"><a href="#">Доп. ссылка</a></h6>
@@ -438,7 +434,7 @@
       </li>
       <li class="list-inline-item">
         <h6 class="small"><a href="#">Доп. ссылка</a></h6>
-      </li>
+      </li> -->
 
       <h6 class="small">made by: @dtekio</h1>
     </div>
