@@ -26,6 +26,7 @@ h6 {
 
 p {
   color: #8f8f8f;
+  font-size: small;
 }
 
 /* Headings */
@@ -106,6 +107,12 @@ p {
 #title .container-fluid {
   padding: 3% 15% 7%;
 }
+
+.zhalgas p {
+  color: #fff;
+  font-size: small;
+}
+
 
 /* Title Image */
 .title-image {
@@ -217,4 +224,14 @@ p {
 
 .modal-content {
   color: #000;
+}
+
+.card {
+  margin: 10px;
+  text-align: center;
+  
+}
+
+.feedback {
+  margin: 50px;
 }

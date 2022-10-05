@@ -1,6 +1,5 @@
 import os
 from flask import Flask, redirect, render_template, url_for, request
-from flask_bootstrap import Bootstrap
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
@@ -10,7 +9,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template("index.html")
+    team = [{'name':'Айдана','photo':'aidana','inst':'berkimbayyeva','grade':'10G'},
+            {'name':'Рамадан','photo':'ramadan','inst':'ramadan_marat','grade':'10B'},
+            {'name':'Томирис','photo':'tomiris','inst':'tomiriskassym','grade':'10G'}]
+    return render_template("index.html", team=team)
 
 
 @app.route("/contact", methods=['POST'])
@@ -22,14 +24,8 @@ def contact():
             subject='New Message',
             html_content=f'Name: { request.form.get("name") } | Message: «{request.form.get("message")}»'
         )
-        try:
-            sg = SendGridAPIClient(os.getenv('SENDGRID_API', None))
-            response = sg.send(message)
-            print(response.status_code)
-            print(response.body)
-            print(response.headers)
-        except Exception as e:
-            print(e.message)
+        sg = SendGridAPIClient(os.getenv('SENDGRID_API', None))
+        sg.send(message)
     return redirect(url_for('home'))
 
 
