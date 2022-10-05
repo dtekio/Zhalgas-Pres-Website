@@ -112,14 +112,6 @@
               </tr>
             </table>
           </div>
-          <h5>Присоединяйся!</h5>
-          <a href="https://chat.whatsapp.com/KIFPP3QRn1TIGAtm3lEuCg" class="btn btn-primary"><i
-              class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-          <a href="https://t.me/+sgmk-e16JA43YTQy" class="btn btn-primary"><i
-              class="fa-brands fa-telegram"></i>Telegram</a>
-          <br>
-
-          <img class="logo-image" src="{{ url_for('static', filename='img/logo.png')}}" alt="iphone-mockup">
 
         </div>
 
@@ -139,7 +131,7 @@
           <h5 class="modal-title" id="infoLabel">Связаться</h5>
         </div>
         <div class="modal-body">
-          <div class="container-fluid">
+          <div class="container-fluid" style="padding-left: 30px; padding-right: 30px;">
             <div class="row">
               <!-- <div class="col-lg-6">
                 <form action="/contact" method="post" id='contactform' class="form" role="form" novalidate="">
@@ -154,6 +146,17 @@
                 </form>
               </div> -->
 
+              <div class="col-lg-6">
+                <h5>Присоединяйся!</h5>
+                <a href="https://chat.whatsapp.com/KIFPP3QRn1TIGAtm3lEuCg" class="btn btn-primary"><i
+                    class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+                <a href="https://t.me/+sgmk-e16JA43YTQy" class="btn btn-primary"><i
+                    class="fa-brands fa-telegram"></i>Telegram</a>
+                <br>
+
+                <img class="logo-image" src="{{ url_for('static', filename='img/logo.png')}}" alt="iphone-mockup">
+
+              </div>
               <div class="col-lg-6">
                 <h3 class="contact">Данные</h3>
                 <p class="small">
@@ -273,7 +276,7 @@
         {% if loop.index == 1 %}
         <div class="carousel-item active container-fluid">
           <img data-bs-toggle="modal" data-bs-target="#{{member['photo']}}" class="team-image"
-          src="/static/img/{{member['photo']}}.jpeg" alt="">
+            src="/static/img/{{member['photo']}}.jpeg" alt="">
           <br>
           <h2 class="team-text">{{member['name']}}</h2>
           <p class="small">(клик по фото)</p>
@@ -292,14 +295,14 @@
                 {{member['grade']}}, inst: <a
                   href="https://www.instagram.com/{{member['inst']}}/">@{{member['inst']}}</a>
               </div>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
         {% else %}
         <div class="carousel-item container-fluid">
           <img data-bs-toggle="modal" data-bs-target="#{{member['photo']}}" class="team-image"
-          src="/static/img/{{member['photo']}}.jpeg" alt="">
+            src="/static/img/{{member['photo']}}.jpeg" alt="">
           <br>
           <h2 class="team-text">{{member['name']}}</h2>
           <p class="small">(клик по фото)</p>
@@ -424,7 +427,7 @@
 
     <div class="additional-links">
       <h1>#voteforzhalgas</h1>
-<!--       
+      <!--       
       <h3>Смотреть:</h3>
       <li class="list-inline-item">
         <h6 class="small"><a href="#">Доп. ссылка</a></h6>
