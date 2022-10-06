@@ -75,9 +75,6 @@
         <div class="col-lg-6">
           <h1 class="big-heading">ӨЗБЕХАН ЖАЛҒАС</h1>
           <h5>— bizben birge bol 💜🧡</h5>
-
-
-
           <div class="zhalgas">
             <p class="small">
               Привет! Меня зовут Жалгас и я баллотируюсь на пост президента школы.</h6>
@@ -112,9 +109,7 @@
               </tr>
             </table>
           </div>
-
         </div>
-
         <div class="col-lg-6">
           <img class="title-image" src="{{ url_for('static', filename='img/zhalgas.jpeg')}}" alt="iphone-mockup">
         </div>
@@ -133,19 +128,6 @@
         <div class="modal-body">
           <div class="container-fluid" style="padding-left: 30px; padding-right: 30px;">
             <div class="row">
-              <!-- <div class="col-lg-6">
-                <form action="/contact" method="post" id='contactform' class="form" role="form" novalidate="">
-                  <div class="form-group  required"><label class="control-label" for="name">Имя</label>
-                    <input class="form-control" id="name" name="name" required="" type="text" value="">
-                  </div>
-                  <div class="form-group  required"><label class="control-label" for="message">Сообщение</label>
-                    <input class="form-control" id="message" name="message" required="" type="text" value="">
-                  </div>
-                  <input class="btn btn-outline-dark" id="submit" name="submit" type="submit" value="Отправить"
-                    formtarget="#contactform">
-                </form>
-              </div> -->
-
               <div class="col-lg-6">
                 <h5>Присоединяйся!</h5>
                 <a href="https://chat.whatsapp.com/KIFPP3QRn1TIGAtm3lEuCg" class="btn btn-primary"><i
@@ -272,64 +254,50 @@
     <h1 style="padding-top: 50px;">Наша команда: </h1>
     <div id="team-carousel" class="carousel slide" data-ride="false">
       <div class="carousel-inner">
-        {% for member in team: %}
-        {% if loop.index == 1 %}
-        <div class="carousel-item active container-fluid">
-          <img data-bs-toggle="modal" data-bs-target="#{{member['photo']}}" class="team-image"
-            src="/static/img/{{member['photo']}}.jpeg" alt="">
+        <div class="carousel-item container-fluid">
+          <img data-bs-toggle="modal" data-bs-target="#aidana" class="team-image" src="/static/img/aidana.jpeg" alt="">
           <br>
-          <h2 class="team-text">{{member['name']}}</h2>
+          <h2 class="team-text">Айдана</h2>
           <p class="small">(клик по фото)</p>
         </div>
-
         <!-- Modal -->
-        <div class="modal fade" id="{{member['photo']}}" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
+        <div class="modal fade" id="aidana" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{member['name']}}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Айдана</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                {{member['grade']}}, inst: <a
-                  href="https://www.instagram.com/{{member['inst']}}/">@{{member['inst']}}</a>
+                10G, inst: <a href="https://www.instagram.com/berkimbayyeva/">@berkimbayyeva</a>
               </div>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
-        {% else %}
         <div class="carousel-item container-fluid">
-          <img data-bs-toggle="modal" data-bs-target="#{{member['photo']}}" class="team-image"
-            src="/static/img/{{member['photo']}}.jpeg" alt="">
+          <img data-bs-toggle="modal" data-bs-target="#ramadan" class="team-image" src="/static/img/ramadan.jpeg"
+            alt="">
           <br>
-          <h2 class="team-text">{{member['name']}}</h2>
+          <h2 class="team-text">Рамадан</h2>
           <p class="small">(клик по фото)</p>
         </div>
-
         <!-- Modal -->
-        <div class="modal fade" id="{{member['photo']}}" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
+        <div class="modal fade" id="ramadan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{member['name']}}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Рамадан</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                {{member['grade']}}, inst: <a
-                  href="https://www.instagram.com/{{member['inst']}}/">{{member['inst']}}</a>
+                10B, inst: <a href="https://www.instagram.com/ramadan_marat/">ramadan_marat</a>
               </div>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
             </div>
           </div>
         </div>
-        {% endif %}
-        {% endfor %}
-
-
-        <div class="carousel-item container-fluid">
+        <div class="carousel-item container-fluid active">
           <img class="team-image" src="/static/img/team.JPG" alt="">
         </div>
 
@@ -351,7 +319,6 @@
     <p class="small">- Эдгар Лоренс Доктороу, "Билли Батгейт"</p>
     <div class="container-fluid">
       <div class="row">
-
         <div class="card col-lg-4 mx-auto">
           <div class="card-header">
             <h3>Менторство.</h3>
@@ -375,7 +342,6 @@
               форме, тем самым повысить эффективность обучения и разукрасить ваши школьные будни!</p>
           </div>
         </div>
-
         <div class="card col-lg-9 mx-auto">
           <div class="card-header">
             <h3>Поступление, проекты и портфолио.</h3>
@@ -391,7 +357,6 @@
             </p>
           </div>
         </div>
-
         <div class="card col-lg-9 mx-auto">
           <div class="card-header">
             <h3>Мероприятие со школами COASH.</h3>
@@ -417,32 +382,17 @@
           </div>
         </div>
       </div>
-
       <div class="feedback">
         <h3>Есть предложения? Свяжись с нами, и мы ответим</h3>
         <a href="#cta"><button class="btn btn-lg btn-block btn-outline-dark" type="button" data-bs-toggle="modal"
             data-bs-target="#info">Связаться</button></a>
       </div>
     </div>
-
     <div class="additional-links">
       <h1>#voteforzhalgas</h1>
-      <!--       
-      <h3>Смотреть:</h3>
-      <li class="list-inline-item">
-        <h6 class="small"><a href="#">Доп. ссылка</a></h6>
-      </li>
-      <li class="list-inline-item">
-        <h6 class="small"><a href="#">Доп. ссылка</a></h6>
-      </li>
-      <li class="list-inline-item">
-        <h6 class="small"><a href="#">Доп. ссылка</a></h6>
-      </li> -->
-
       <h6 class="small">made by: @dtekio</h1>
     </div>
   </section>
-
   <!-- Bootstrap core JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
